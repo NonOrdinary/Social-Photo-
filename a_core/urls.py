@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from a_posts.views import *
 
+# this is the routing page here all routing takes place
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view),
+    path('post/create/', post_create_view, name = 'post-create') #giving name is not mandatory but still fine though because we can change it 
 ]
